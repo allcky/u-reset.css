@@ -1,0 +1,95 @@
+/* u-reset.css v1.0.0 */
+*{
+	-webkit-tap-highlight-color: transparent;
+}
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+/**
+ * 移除body默认margin值.
+ */
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+/**
+ * "figure"标签规定独立的流内容（图像、图表、照片、代码等等）
+ */
+figure {
+	margin:0px;
+}
+
+p {
+	margin:0px;
+}
+/**
+ * 去除h*标签的边距及加粗.
+ */
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+	padding:0;
+	font-weight: normal;
+}
+
+/**
+ * 去除列表边距及符号.
+ */
+ul,ol,dl,li,dt,dd{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+/**
+ * 去除IE10中活动链接的灰色背景.
+ */
+a {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+/**
+ * 去除IE6-10中a链接包裹图片蓝色边框.
+ */
+img{
+	border:0;
+}
+
+
+/**
+ * 删除表格单元格之间的间距。
+ */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,th {
+	padding: 0;
+}
+
+/**
+ * 删除表格单元格之间的间距。
+ */
+button,input,select,textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+/**
+ * IE 8/9/10/11中，去除默认垂直滚动条属性
+ */
+textarea {
+	overflow: auto;
+}
+
+
+/**
+ * HTML5新模块元素在IE8、9版本浏览器中没有被定义默认样式。为解决该问题，给下列元素添加“block”显示属性。
+ */
+article,aside,figcaption,figure,footer,header,hgroup,main,menu,nav,section, {
+	display: block;
+}

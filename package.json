@@ -1,0 +1,23 @@
+{
+  "name": "u-reset.css",
+  "version": "1.0.0",
+  "description": "This is a reset style library.",
+  "main": "u-reset.css",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/U-FE/u-reset.css.git"
+  },
+  "keywords": [
+    "reset.css",
+    "reset.css",
+    "reset styles",
+    "重置样式"
+  ],
+  "author": "hnz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/U-FE/u-reset.css/issues"
+  },
+  "homepage": "https://github.com/U-FE/u-reset.css#readme"
+}
