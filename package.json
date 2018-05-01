@@ -1,6 +1,6 @@
 {
   "name": "u-reset.css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a reset style library.",
   "main": "u-reset.css",
   "scripts": {},

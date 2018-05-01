@@ -5,6 +5,9 @@ This is a reset style library.
 ```
 npm install --save u-reset.css
 ```
+## Download
+
+https://github.com/U-FE/u-reset.css/releases/download/v1.0.0/u-reset.css
 
 ## Browser support
 
