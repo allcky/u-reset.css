@@ -11,7 +11,7 @@ npm install --save u-reset.css
 ```
 ## Download
 
-https://github.com/U-FE/u-reset.css/releases/download/v1.0.0/u-reset.css
+https://unpkg.com/u-reset.css@1.0.2/u-reset.css
 
 ## Browser support
 

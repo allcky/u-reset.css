@@ -1,4 +1,4 @@
-/* u-reset.css v1.0.0 */
+/* u-reset.css v1.0.2 */
 *{
 	-webkit-tap-highlight-color: transparent;
 }
@@ -86,10 +86,9 @@ textarea {
 	overflow: auto;
 }
 
-
 /**
  * HTML5新模块元素在IE8、9版本浏览器中没有被定义默认样式。为解决该问题，给下列元素添加“block”显示属性。
  */
-article,aside,figcaption,figure,footer,header,hgroup,main,menu,nav,section, {
+article,aside,figcaption,figure,footer,header,hgroup,main,nav,section, {
 	display: block;
 }
