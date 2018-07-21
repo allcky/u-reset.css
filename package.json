@@ -1,6 +1,6 @@
 {
   "name": "u-reset.css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is a reset style library.",
   "main": "u-reset.css",
   "scripts": {},
@@ -9,6 +9,8 @@
     "url": "git+https://github.com/U-FE/u-reset.css.git"
   },
   "keywords": [
+    "resetcss",
+    "reset-css",
     "reset.css",
     "resetstyle",
     "stylereset",

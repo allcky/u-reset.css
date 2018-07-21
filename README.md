@@ -1,6 +1,8 @@
 # u-reset.css
 This is a reset style library.
 
+这是一个重置样式库。
+
 [![npm version](https://img.shields.io/npm/v/u-reset.css.svg?style=flat-square)](https://www.npmjs.org/package/u-reset.css)
 [![npm downloads](https://img.shields.io/npm/dm/u-reset.css.svg?style=flat-square)](http://npm-stat.com/charts.html?package=u-reset.css)
 
@@ -11,7 +13,7 @@ npm install --save u-reset.css
 ```
 ## Download
 
-https://unpkg.com/u-reset.css@1.0.2/u-reset.css
+https://unpkg.com/u-reset.css
 
 ## Browser support
 
