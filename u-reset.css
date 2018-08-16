@@ -1,4 +1,4 @@
-/* u-reset.css v1.0.2 */
+/* u-reset.css v1.0.4 */
 *{
 	-webkit-tap-highlight-color: transparent;
 }
@@ -8,10 +8,12 @@ html {
 
 /**
  * 移除body默认margin值.
+ * 统一终端中文/英文字体
  */
 body {
 	margin: 0;
-	font-family: sans-serif;
+	/* 中文("PingFang SC","Microsoft YaHei","Hiragino Sans GB","微软雅黑")/英文字体("Helvetica Neue",Helvetica,Arial) */
+	font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
 
 /**

@@ -5,6 +5,7 @@ This is a reset style library.
 
 [![npm version](https://img.shields.io/npm/v/u-reset.css.svg?style=flat-square)](https://www.npmjs.org/package/u-reset.css)
 [![npm downloads](https://img.shields.io/npm/dm/u-reset.css.svg?style=flat-square)](http://npm-stat.com/charts.html?package=u-reset.css)
+[![Dependency Status](https://img.shields.io/david/allcky/u-reset.css.svg?style=flat-square)](https://david-dm.org/allcky/u-reset.css)
 
 
 ## Install
@@ -14,6 +15,16 @@ npm install --save u-reset.css
 ## Download
 
 https://unpkg.com/u-reset.css
+
+## Example
+```
+//import
+require("u-reset.css");
+@import "u-reset.css";
+
+//CDN
+<link rel="stylesheet" href="https://unpkg.com/u-reset.css">
+```
 
 ## Browser support
 
