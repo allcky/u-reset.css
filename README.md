@@ -25,6 +25,53 @@ require("u-reset.css");
 //CDN
 <link rel="stylesheet" href="https://unpkg.com/u-reset.css">
 ```
+## REM布局
+> 引入`u-reset.css`就可以进行REM布局。<br/>
+
+
+如果设计稿测量的宽度为 100px => 1rem。
+```
+design 100px  ->  css 1rem
+design 150px  ->  css 1.5rem
+design 284px  ->  css 2.84rem
+```
+> 注意：需在html标签添加属性rem(\<html rem="750">\</html>)。
+
+示例
+```
+***.html
+<html rem="750">
+</html>
+```
+```
+***.css
+.container{
+    width:1rem;
+    height:1.54rem;
+}
+.col{
+    width:0.36rem;
+    height:0.52rem;
+}
+```
+
+## 文本的溢出显示省略号
+
+- 添加`class="hidden1"`  1行溢出出现省略号
+- 添加`class="hidden2"`  2行溢出出现省略号
+- ...
+- 添加`class="hidden5"`  5行溢出出现省略号
+
+```
+<div class="hidden1"></div>
+<div class="hidden2"></div>
+...
+<div class="hidden5"></div>
+```
+## 特性
+1. 基于CSS的REM布局
+- 统一终端中文/英文字体
+- 文本的溢出显示省略号
 
 ## Browser support
 
