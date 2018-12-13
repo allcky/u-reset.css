@@ -1,6 +1,6 @@
 {
   "name": "u-reset.css",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This is a reset style library.",
   "main": "u-reset.min.css",
   "repository": {
@@ -18,7 +18,7 @@
     "REM布局",
     "重置样式"
   ],
-  "author": "hnz",
+  "author": "allcky",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/U-FE/u-reset.css/issues"

@@ -1,16 +1,15 @@
 # u-reset.css
-This is a reset style library.
+> 这是一个简洁的重置样式库。
 
-这是一个重置样式库。
+This is a reset style library.
 
 [![npm version](https://img.shields.io/npm/v/u-reset.css.svg?style=flat-square)](https://www.npmjs.org/package/u-reset.css)
 [![npm downloads](https://img.shields.io/npm/dm/u-reset.css.svg?style=flat-square)](http://npm-stat.com/charts.html?package=u-reset.css)
 [![Dependency Status](https://img.shields.io/david/allcky/u-reset.css.svg?style=flat-square)](https://david-dm.org/allcky/u-reset.css)
 
-
 ## Install
 ```
-npm install --save u-reset.css
+npm install u-reset.css
 ```
 ## Download
 
@@ -18,7 +17,7 @@ https://unpkg.com/u-reset.css
 
 ## Example
 ```
-//import
+//module
 require("u-reset.css");
 @import "u-reset.css";
 
@@ -28,7 +27,6 @@ require("u-reset.css");
 ## REM布局
 > 引入`u-reset.css`就可以进行REM布局。<br/>
 
-
 如果设计稿测量的宽度为 100px => 1rem。
 ```
 design 100px  ->  css 1rem
@@ -36,6 +34,8 @@ design 150px  ->  css 1.5rem
 design 284px  ->  css 2.84rem
 ```
 > 注意：需在html标签添加属性rem(\<html rem="750">\</html>)。
+
+目前添加的适配尺寸为： 750px、1080px
 
 示例
 ```
@@ -68,10 +68,17 @@ design 284px  ->  css 2.84rem
 ...
 <div class="hidden5"></div>
 ```
+
+## 清除浮动 
+```
+<div class="clearfix"></div>
+```
+
 ## 特性
 1. 基于CSS的REM布局
 2. 统一终端中文/英文字体
 3. 文本的溢出显示省略号
+4. 清除浮动 
 
 ## Browser support
 
