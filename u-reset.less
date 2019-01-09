@@ -1,4 +1,4 @@
-/* u-reset.css v1.0.6 */
+/* u-reset.css v1.0.10 */
 
 /**
  * REM布局
@@ -17,8 +17,6 @@
 [rem="750"]{
 	font-size: 13.333333333vw;
 }
-
-
 *{
 	-webkit-tap-highlight-color: transparent;
 }
@@ -37,6 +35,7 @@ body {
 	* 英文字体("Helvetica Neue",Helvetica,Arial) 
 	*/
 	font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+	font-size: 16px;
 }
 
 /**
@@ -115,11 +114,16 @@ textarea {
 /**
  * HTML5新模块元素在IE8、9版本浏览器中没有被定义默认样式。为解决该问题，给下列元素添加“block”显示属性。
  */
-article,aside,figcaption,figure,footer,header,hgroup,main,nav,section, {
+article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
 	display: block;
 }
 
-
+/**
+ * IE 8/9/10/11/12 兼容template标签
+ */
+template{
+	display: none;
+}
 /**
  * 文本的溢出显示省略号  
  * 添加`class="hidden1"`  1行溢出出现省略号
@@ -127,41 +131,35 @@ article,aside,figcaption,figure,footer,header,hgroup,main,nav,section, {
  * ...
  * 添加`class="hidden5"`  5行溢出出现省略号
  */
+.hidden2,.hidden3,.hidden4,.hidden5{
+	display: -webkit-box;
+	/* autoprefixer:off */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
 .hidden1{
 	overflow: hidden;
 	text-overflow:ellipsis;
 	white-space: nowrap;
 }
 .hidden2{
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
-	overflow: hidden;
 }
 .hidden3{
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 3;
-	overflow: hidden;
 }
 .hidden4{
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 4;
-	overflow: hidden;
 }
 .hidden5{
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 5;
-	overflow: hidden;
 }
 
 /**
  * 清除浮动  
  * 添加`class="clearfix"`
  */
-.clearfix:after {
+.clearfix::after ,.clearfix::before {
     content: "";
     width: 0;
     height: 0;

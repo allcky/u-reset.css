@@ -1,11 +1,15 @@
 {
   "name": "u-reset.css",
-  "version": "1.0.6",
+  "version": "1.0.10",
   "description": "This is a reset style library.",
   "main": "u-reset.min.css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/U-FE/u-reset.css.git"
+    "url": "git+https://github.com/allcky/u-reset.css.git"
+  },
+  "scripts": {
+    "build": "lessc u-reset.less u-reset.css",
+    "build-min": "lessc u-reset.less u-reset.min.css --clean-css=advanced"
   },
   "keywords": [
     "resetcss",
@@ -21,7 +25,7 @@
   "author": "allcky",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/U-FE/u-reset.css/issues"
+    "url": "https://github.com/allcky/u-reset.css/issues"
   },
-  "homepage": "https://github.com/U-FE/u-reset.css#readme"
+  "homepage": "https://allcky.github.io/u-reset.css"
 }

@@ -1,4 +1,4 @@
-/* u-reset.css v1.0.6 */
+/* u-reset.css v1.0.10 */
 /**
  * REM布局
  * 
@@ -32,6 +32,7 @@ body {
 	* 英文字体("Helvetica Neue",Helvetica,Arial) 
 	*/
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-size: 16px;
 }
 /**
  * "figure"标签规定独立的流内容（图像、图表、照片、代码等等）
@@ -126,46 +127,50 @@ section {
   display: block;
 }
 /**
+ * IE 8/9/10/11/12 兼容template标签
+ */
+template {
+  display: none;
+}
+/**
  * 文本的溢出显示省略号  
  * 添加`class="hidden1"`  1行溢出出现省略号
  * 添加`class="hidden2"`  2行溢出出现省略号
  * ...
  * 添加`class="hidden5"`  5行溢出出现省略号
  */
+.hidden2,
+.hidden3,
+.hidden4,
+.hidden5 {
+  display: -webkit-box;
+  /* autoprefixer:off */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .hidden1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .hidden2 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  overflow: hidden;
 }
 .hidden3 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-  overflow: hidden;
 }
 .hidden4 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
-  overflow: hidden;
 }
 .hidden5 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
-  overflow: hidden;
 }
 /**
  * 清除浮动  
  * 添加`class="clearfix"`
  */
-.clearfix:after {
+.clearfix::after,
+.clearfix::before {
   content: "";
   width: 0;
   height: 0;

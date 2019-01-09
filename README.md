@@ -3,9 +3,14 @@
 
 This is a reset style library.
 
-[![npm version](https://img.shields.io/npm/v/u-reset.css.svg?style=flat-square)](https://www.npmjs.org/package/u-reset.css)
-[![npm downloads](https://img.shields.io/npm/dm/u-reset.css.svg?style=flat-square)](http://npm-stat.com/charts.html?package=u-reset.css)
-[![Dependency Status](https://img.shields.io/david/allcky/u-reset.css.svg?style=flat-square)](https://david-dm.org/allcky/u-reset.css)
+![npm-version](https://img.shields.io/npm/v/u-reset.css.svg)
+![npm-download](https://img.shields.io/npm/dm/u-reset.css.svg)
+![npm-installsize](https://packagephobia.now.sh/badge?p=u-reset.css)
+![npm-minsize](https://img.shields.io/bundlephobia/min/u-reset.css.svg)
+![npm-devdependencies](https://img.shields.io/david/dev/allcky/u-reset.css.svg)
+![npm-dependencies](https://img.shields.io/david/allcky/u-reset.css.svg)
+![npm-license](https://img.shields.io/npm/l/u-reset.css.svg)
+
 
 ## Install
 ```
@@ -19,7 +24,7 @@ https://unpkg.com/u-reset.css
 ```
 //module
 require("u-reset.css");
-@import "u-reset.css";
+import "u-reset.css";
 
 //CDN
 <link rel="stylesheet" href="https://unpkg.com/u-reset.css">
