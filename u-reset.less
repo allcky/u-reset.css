@@ -1,4 +1,4 @@
-/* u-reset.css v1.0.10 */
+/* u-reset.css v1.0.11 */
 
 /**
  * REM布局
@@ -10,12 +10,17 @@
  * design 150px  ->  css 1.5rem
  * design 284px  ->  css 2.84rem
  */
-[rem="1920"]{
-	font-size: 5.2083333333vw;
+/* 适配PC端 1920px设计稿 */
+@pc-screen-width:1920;
+/* 适配手机端 750px设计稿 */
+@mobile-screen-width:750;
+
+[rem="@{pc-screen-width}"]{
+	font-size: (100/@pc-screen-width*100vw);
 }
 
-[rem="750"]{
-	font-size: 13.333333333vw;
+[rem="@{mobile-screen-width}"]{
+	font-size: (100/@mobile-screen-width*100vw);
 }
 *{
 	-webkit-tap-highlight-color: transparent;
@@ -26,12 +31,12 @@ html {
 
 /**
  * 移除body默认margin值.
- * 统一终端(windows,mac,linux)中文/英文字体.
+ * 统一终端(windows,mac,linux)中文/英文字体.可在各个操作系统下都有最佳展示效果。
  */
 body {
 	margin: 0;
 	/**  
-	* 中文("PingFang SC","Microsoft YaHei","Hiragino Sans GB","微软雅黑")
+	* 中文字体("PingFang SC","Microsoft YaHei","Hiragino Sans GB","微软雅黑")
 	* 英文字体("Helvetica Neue",Helvetica,Arial) 
 	*/
 	font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
@@ -58,14 +63,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /**
- * 去除列表边距及符号.
+ * 去除列表ul,ol边距及符号.
  */
-ul,ol,dl,li,dt,dd{
+ul,ol{
 	margin:0;
 	padding:0;
 	list-style: none;
 }
-
 /**
  * 去除IE10中活动链接的灰色背景.
  */
@@ -75,7 +79,7 @@ a {
 }
 
 /**
- * 去除IE6-10中a链接包裹图片蓝色边框.
+ * 去除IE9-10中a链接包裹图片蓝色边框.
  */
 img{
 	border:0;
@@ -100,26 +104,19 @@ td,th {
  */
 button,input,select,textarea {
 	color: inherit;
-	font: inherit;
+	font-family: inherit;
 	margin: 0;
 }
 
 /**
- * IE 8/9/10/11中，去除默认垂直滚动条属性
+ * IE 9/10/11中，去除默认垂直滚动条属性
  */
 textarea {
 	overflow: auto;
 }
 
 /**
- * HTML5新模块元素在IE8、9版本浏览器中没有被定义默认样式。为解决该问题，给下列元素添加“block”显示属性。
- */
-article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
-	display: block;
-}
-
-/**
- * IE 8/9/10/11/12 兼容template标签
+ * IE 9/10/11/12 兼容template标签
  */
 template{
 	display: none;
@@ -165,4 +162,11 @@ template{
     height: 0;
     display: block;
     clear: both;
+}
+/**
+ * hidden html标签的属性，用于隐藏元素
+ * IE 9/10 兼容hidden属性
+ */
+[hidden]{
+	display: none;
 }

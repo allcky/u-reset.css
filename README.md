@@ -78,17 +78,18 @@ design 284px  ->  css 2.84rem
 ```
 <div class="clearfix"></div>
 ```
-
+## 隐藏元素 
+```
+<div hidden></div>
+```
 ## 特性
 1. 基于CSS的REM布局
-2. 统一终端中文/英文字体
-3. 文本的溢出显示省略号
+2. 统一各个平台中文/英文字体
+3. 单行、多行文本的溢出显示省略号
 4. 清除浮动 
-
+5. hidden属性兼容
 ## Browser support
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |
 --- | --- | --- | --- | --- | --- |
-Latest √ | Latest √ | Latest √ | Latest √ | Latest √| 8+ √
-
-
+Latest √ | Latest √ | Latest √ | Latest √ | Latest √| 9+ √
