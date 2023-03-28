@@ -1,7 +1,7 @@
 {
   "name": "u-reset.css",
-  "version": "1.0.11",
-  "description": "This is a reset style library.",
+  "version": "2.0.0",
+  "description": "这是一个小而美的现代CSS样式重置优秀实践！",
   "main": "u-reset.min.css",
   "repository": {
     "type": "git",
@@ -12,6 +12,7 @@
     "build-min": "lessc u-reset.less u-reset.min.css --clean-css=advanced"
   },
   "keywords": [
+    "u-reset.css",
     "resetcss",
     "reset-css",
     "reset.css",
@@ -20,9 +21,10 @@
     "reset-css",
     "rem",
     "REM布局",
-    "重置样式"
+    "重置样式",
+    "现代CSS样式重置优秀实践"
   ],
-  "author": "allcky",
+  "author": "houningzhou",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/allcky/u-reset.css/issues"

@@ -1,72 +1,90 @@
 # u-reset.css
-> 这是一个简洁的重置样式库。
+> 这是一个小而美的现代CSS样式重置优秀实践！
 
-This is a reset style library.
+This is a small and beautiful modern CSS style reset excellent practice!
 
 ![npm-version](https://img.shields.io/npm/v/u-reset.css.svg)
 ![npm-download](https://img.shields.io/npm/dm/u-reset.css.svg)
 ![npm-installsize](https://packagephobia.now.sh/badge?p=u-reset.css)
 ![npm-minsize](https://img.shields.io/bundlephobia/min/u-reset.css.svg)
-![npm-devdependencies](https://img.shields.io/david/dev/allcky/u-reset.css.svg)
-![npm-dependencies](https://img.shields.io/david/allcky/u-reset.css.svg)
 ![npm-license](https://img.shields.io/npm/l/u-reset.css.svg)
 
+## 特性
+1. 统一终端(windows,mac,linux)中文/英文字体
+2. 统一相关标签预设样式
+3. 支持REM布局，且支持自定义设计稿尺寸
+4. 支持单行、多行文本的溢出显示省略号
+5. 支持网站灰度模式、色弱模式
+6. 支持清除浮动
 
-## Install
+## 安装导入
 ```
 npm install u-reset.css
 ```
-## Download
-
-https://unpkg.com/u-reset.css
-
-## Example
+构建工具导入模块：
 ```
-//module
-require("u-reset.css");
+// es module
 import "u-reset.css";
+```
+> 提示：默认导入压缩`u-reset.min.css`文件，大小仅为1KB。
+## 下载引入
 
-//CDN
+点击下载：https://unpkg.com/u-reset.css
+
+```
+<link rel="stylesheet" href="path/u-reset.min.css">
+```
+
+浏览器CDN引入
+```
+// CDN
 <link rel="stylesheet" href="https://unpkg.com/u-reset.css">
 ```
-## REM布局
-> 引入`u-reset.css`就可以进行REM布局。<br/>
+## 功能使用
+### REM布局
+支持REM布局，默认适配750px、1080px设计稿，且支持自定义设计稿尺寸。
 
-如果设计稿测量的宽度为 100px => 1rem。
+使用流程：
+1. 引入 u-reset.css 
+2. 在`<html>`添加 `rem` 属性
+3. 将设计稿尺寸px转换CSS rem单位(比例：design 100px : css 1rem)
+
+#### 尺寸比例
+```
+design 100px  ->  css 1rem
+```
+如：
 ```
 design 100px  ->  css 1rem
 design 150px  ->  css 1.5rem
 design 284px  ->  css 2.84rem
 ```
-> 注意：需在html标签添加属性rem(\<html rem="750">\</html>)。
 
-目前添加的适配尺寸为： 750px、1080px
+#### 默认适配尺寸
+使用需在html标签添加属性rem
+```
+<html rem></html>
+```
+> 提示：默认适配设计稿尺寸为：750px、1080px
 
-示例
+#### 自定义适配尺寸
+
+示例：设计稿尺寸 1440px
 ```
 ***.html
-<html rem="750">
+<html rem style="--design-width: 1440px">
 </html>
 ```
-```
-***.css
-.container{
-    width:1rem;
-    height:1.54rem;
-}
-.col{
-    width:0.36rem;
-    height:0.52rem;
-}
-```
+> 提示：`--design-width` 为自定义css变量，通过该变量自定义设计稿尺寸。
 
-## 文本的溢出显示省略号
+### 文本的溢出显示省略号
 
 - 添加`class="hidden1"`  1行溢出出现省略号
 - 添加`class="hidden2"`  2行溢出出现省略号
 - ...
 - 添加`class="hidden5"`  5行溢出出现省略号
 
+示例：
 ```
 <div class="hidden1"></div>
 <div class="hidden2"></div>
@@ -74,22 +92,43 @@ design 284px  ->  css 2.84rem
 <div class="hidden5"></div>
 ```
 
-## 清除浮动 
+### 清除浮动
+在待清除浮动元素添加`clearfix` 类名即可。
+
+示例：
 ```
 <div class="clearfix"></div>
 ```
-## 隐藏元素 
+### 灰度模式
+> 支持 属性 与 class 两种方式
+
+给html 添加 gray-model 属性
 ```
-<div hidden></div>
+<html gray-model>
 ```
-## 特性
-1. 基于CSS的REM布局
-2. 统一各个平台中文/英文字体
-3. 单行、多行文本的溢出显示省略号
-4. 清除浮动 
-5. hidden属性兼容
-## Browser support
+或者，给html 添加 gray-model 类名
+```
+<html class="gray-model">
+```
+### 色弱模式
+> 支持 属性 与 class 两种方式
+
+给html 添加 color-weak-model 属性
+```
+<html color-weak-model>
+```
+或者，给html 添加 color-weak-model 类名
+```
+<html class="color-weak-model">
+```
+## 浏览器支持
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |
 --- | --- | --- | --- | --- | --- |
-Latest √ | Latest √ | Latest √ | Latest √ | Latest √| 9+ √
+Latest √ | Latest √ | Latest √ | Latest √ | Latest √| × |
+
+> 提示：不支持IE浏览器！
+
+## 版本历史
+- V2.0.0 **去除IE兼容**，**新增灰度、色弱模式**，**REM支持自定义尺寸**，清除浮动，重置标签预设样式，统一终端字体
+- V1.0.0 兼容IE，REM，清除浮动，重置标签预设样式，统一终端字体
