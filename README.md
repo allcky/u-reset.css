@@ -3,11 +3,12 @@
 
 This is a small and beautiful modern CSS style reset excellent practice!
 
-![npm-version](https://img.shields.io/npm/v/u-reset.css.svg)
-![npm-download](https://img.shields.io/npm/dm/u-reset.css.svg)
-![npm-installsize](https://packagephobia.now.sh/badge?p=u-reset.css)
-![npm-minsize](https://img.shields.io/bundlephobia/min/u-reset.css.svg)
-![npm-license](https://img.shields.io/npm/l/u-reset.css.svg)
+![npm-version](https://img.shields.io/npm/v/u-reset.css.svg "当前版本号")
+![npm-download](https://img.shields.io/npm/dm/u-reset.css.svg "NPM月下载量")
+![cnpm-download](https://npm.taobao.org/badge/d/u-reset.css.svg "CNPM月下载量")
+![npm-installsize](https://badgen.net/packagephobia/install/u-reset.css "安装大小")
+![npm-minsize](https://img.shields.io/bundlephobia/min/u-reset.css.svg "生产版本大小")
+![npm-license](https://img.shields.io/npm/l/u-reset.css.svg "许可")
 
 ## 特性
 1. 统一终端(windows,mac,linux)中文/英文字体
@@ -65,17 +66,17 @@ design 284px  ->  css 2.84rem
 ```
 <html rem></html>
 ```
-> 提示：默认适配设计稿尺寸为：750px、1080px
+> 提示：默认适配设计稿尺寸为：移动端 750px、PC端 1080px
 
 #### 自定义适配尺寸
 
-示例：设计稿尺寸 1440px
+示例：自定义适配尺寸，如设计稿 1440px，则在html标签添加如下代码：
 ```
 ***.html
 <html rem style="--design-width: 1440px">
 </html>
 ```
-> 提示：`--design-width` 为自定义css变量，通过该变量自定义设计稿尺寸。
+> 提示：`--design-width` 为自定义CSS变量，通过该变量自定义设计稿尺寸。
 
 ### 文本的溢出显示省略号
 

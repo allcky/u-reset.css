@@ -1,4 +1,4 @@
-/* u-reset.css v2.0.0 */
+/* u-reset.css v2.0.1 */
 /**
  * REM布局：支持自定义设计稿尺寸
  * 默认PC --design-width: 1920;
@@ -24,6 +24,7 @@ html[rem] {
 }
 html {
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 /**
  * 重置body默认margin值.

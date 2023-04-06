@@ -1,6 +1,6 @@
 {
   "name": "u-reset.css",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "这是一个小而美的现代CSS样式重置优秀实践！",
   "main": "u-reset.min.css",
   "repository": {

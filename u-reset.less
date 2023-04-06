@@ -1,4 +1,4 @@
-/* u-reset.css v2.0.0 */
+/* u-reset.css v2.0.1 */
 /**
  * REM布局：支持自定义设计稿尺寸
  * 默认PC --design-width: 1920;
@@ -7,24 +7,31 @@
  * <html style="--design-width: 1920" rem>
  * 开发 1rem = 设计 100px
  */
+// 移动端设计稿尺寸，默认移动端优先
 :root {
-	// 移动端设计稿尺寸，默认移动端优先
 	--design-width: 750;
-	@media screen and (min-width:600px){
-		// PC端设计稿尺寸
+}
+
+// PC端设计稿尺寸
+@media screen and (min-width: 600px) {
+	:root {
 		--design-width: 1920;
 	}
 }
-html[rem]{
-	font-size: calc( 100 / var(--design-width) * 100vw );
+
+html[rem] {
+	font-size: calc(100 / var(--design-width) * 100vw);
 }
+
 /** REM布局 结束 **/
 
-*{
+* {
 	-webkit-tap-highlight-color: transparent;
 }
+
 html {
 	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased; // 字体抗锯齿
 }
 
 /**
@@ -37,7 +44,8 @@ body {
 	* 中文字体("PingFang SC","Microsoft YaHei","Hiragino Sans GB","微软雅黑")
 	* 英文字体("Helvetica Neue",Helvetica,Arial) 
 	*/
-	font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+		'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
 	font-size: 16px;
 }
 
@@ -46,30 +54,39 @@ body {
  * 规定独立的流内容（图像、图表、照片、代码等等）
  */
 figure {
-	margin:0px;
-}
-p {
-	margin:0px;
+	margin: 0px;
 }
 
-img,video {
+p {
+	margin: 0px;
+}
+
+img,
+video {
 	max-width: 100%;
 }
+
 /**
  * 重置h*标签的边距及加粗特性
  */
-h1,h2,h3,h4,h5,h6 {
-	margin:0;
-	padding:0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
 	font-weight: normal;
 }
 
 /**
  * 重置列表ul,ol边距及符号
  */
-ul,ol{
-	margin:0;
-	padding:0;
+ul,
+ol {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
@@ -80,7 +97,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-td,th {
+
+td,
+th {
 	padding: 0;
 }
 
@@ -88,7 +107,10 @@ td,th {
  * 1.重置表格单元格间距
  * 2.修改字体属性为继承
  */
-button,input,select,textarea {
+button,
+input,
+select,
+textarea {
 	color: inherit;
 	font-family: inherit;
 	margin: 0;
@@ -101,27 +123,35 @@ button,input,select,textarea {
  * ...
  * 添加`class="hidden5"`  5行溢出出现省略号
  */
-.hidden2,.hidden3,.hidden4,.hidden5{
+.hidden2,
+.hidden3,
+.hidden4,
+.hidden5 {
 	display: -webkit-box;
 	/* autoprefixer:off */
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 }
-.hidden1{
+
+.hidden1 {
 	overflow: hidden;
-	text-overflow:ellipsis;
+	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.hidden2{
+
+.hidden2 {
 	-webkit-line-clamp: 2;
 }
-.hidden3{
+
+.hidden3 {
 	-webkit-line-clamp: 3;
 }
-.hidden4{
+
+.hidden4 {
 	-webkit-line-clamp: 4;
 }
-.hidden5{
+
+.hidden5 {
 	-webkit-line-clamp: 5;
 }
 
@@ -129,13 +159,15 @@ button,input,select,textarea {
  * 功能：清除浮动特性
  * 添加`class="clearfix"`
  */
-.clearfix::after ,.clearfix::before {
-    content: "";
-    width: 0;
-    height: 0;
-    display: block;
-    clear: both;
+.clearfix::after,
+.clearfix::before {
+	content: '';
+	width: 0;
+	height: 0;
+	display: block;
+	clear: both;
 }
+
 /**
  * 功能：灰度模式
  */
@@ -143,6 +175,7 @@ html.gray-model,
 html[gray-model] {
 	filter: grayscale(100%);
 }
+
 /**
  * 功能：色弱模式
  */
